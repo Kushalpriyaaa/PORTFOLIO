@@ -13,8 +13,8 @@ const items = [
       " Track credits, debits, and import bank data via CSV with monthly reports and visual expense charts.",
        
       "Monitor multi-asset investments with SIP calculator and growth insights.",
-      " AI Chatbot to assist users with financial queries, and provide recommendations."
- ,
+      
+ 
      
     ],
     // techStack: [
@@ -36,7 +36,7 @@ const items = [
     desc: [
       "<strong>Tech Stack:</strong> React, Next.js, PostgreSQL, Drizzle ORM, Neon, Gemini API, Clerk",
       "Quick login (Google/email), camera access, choose interview type.",
-      " Mock Interview Session: Real-time AI-powered interview (by Gemini), with instant feedback.",
+      "  Real-time AI-powered interview (by Gemini), with instant feedback.",
       " Review & Upgrade: Get performance feedback, insights."
     ],
     // techStack: [
@@ -62,7 +62,7 @@ const items = [
       " Multiple Algorithms: Bubble, Insertion, Merge, and Quick Sort with animations.",
       
     
-      "Beginner-Friendly: Simple, interactive tool to understand sorting logic."
+    
     ],
     link: "https://see-the-sort-d7ma.vercel.app/",
   },
@@ -89,7 +89,6 @@ const items = [
       "Users can add new tasks with an input field and assign them a priority level. ",
       "The interface provides filtering options—All, Active, and Completed tasks.",
 
-      "A dropdown on the right allows users to sort tasks based on criteria  for better management."
     ],
     link: " https://task-buddy-4git6js2y-kushalpriyaaas-projects.vercel.app/",
   },
