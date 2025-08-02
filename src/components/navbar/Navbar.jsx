@@ -29,7 +29,7 @@ const Navbar = () => {
           <a href="https://www.instagram.com/kush._k__/" target="_blank" rel="noopener noreferrer">
             <img src="/instagram.png" alt="Instagram" />
           </a>
-          <a href="file:///C:/Users/kushk/Downloads/MTeck_s_Resume__2_%20(5).pdf" target="_blank" rel="noopener noreferrer">
+          <a href="https://drive.google.com/file/d/1lwT6c5kl6INWzB32Ncq0bT-T7rYMT_dG/view?usp=sharing" target="_blank" rel="noopener noreferrer">
           <img src="/kon.png" alt="Resume" />
         </a>
         </div>

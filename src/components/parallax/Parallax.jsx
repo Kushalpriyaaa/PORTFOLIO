@@ -24,8 +24,10 @@ const Parallax = ({ type }) => {
     "MySQL",
     "MongoDB",
     "Python",
-    "Angular",
-    "Bootstrap",
+    "NodeJS",
+  
+    "Tailwind CSS",
+    
   ];
 
   return (
