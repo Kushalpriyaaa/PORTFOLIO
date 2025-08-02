@@ -4,42 +4,107 @@ import "./portfolio.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const items = [
-  
+    {
+    id: 1,
+    title: "MyPockett",
+    img: "Finance.png",
+    desc: [
+      "<strong>Tech Stack:</strong> React, Mongodb, Nodejs,  Gemini API, Clerk.",
+      " Track credits, debits, and import bank data via CSV with monthly reports and visual expense charts.",
+       
+      "Monitor multi-asset investments with SIP calculator and growth insights.",
+      " AI Chatbot to assist users with financial queries, and provide recommendations."
+ ,
+     
+    ],
+    // techStack: [
+    //   { name: "React", logo: "React.png" },
+    //   { name: "Next.js", logo: "Next.js.png" },
+    //   { name: "Tailwind CSS", logo: "tailwind.png" },
+    //   { name: "PostgreSQL", logo: "postgresql.png" },
+    //   { name: "Drizzle ORM", logo: "Drizzle.png" },
+    //   { name: "Neon", logo: "neon.png" },
+    //   { name: "Gemini API", logo: "gemini.png" },
+    //   { name: "Clerk", logo: "Clerk.png" }
+    // ],
+    link: "https://my-pockettt.onrender.com/",
+  },
   {
     id: 2,
+    title: "IntelliMock Ai",
+    img: "Mockai.png",
+    desc: [
+      "<strong>Tech Stack:</strong> React, Next.js, PostgreSQL, Drizzle ORM, Neon, Gemini API, Clerk",
+      "Quick login (Google/email), camera access, choose interview type.",
+      " Mock Interview Session: Real-time AI-powered interview (by Gemini), with instant feedback.",
+      " Review & Upgrade: Get performance feedback, insights."
+    ],
+    // techStack: [
+    //   { name: "React", logo: "React.png" },
+    //   { name: "Next.js", logo: "Next.js.png" },
+    //   { name: "Tailwind CSS", logo: "tailwind.png" },
+    //   { name: "PostgreSQL", logo: "postgresql.png" },
+    //   { name: "Drizzle ORM", logo: "Drizzle.png" },
+    //   { name: "Neon", logo: "neon.png" },
+    //   { name: "Gemini API", logo: "gemini.png" },
+    //   { name: "Clerk", logo: "Clerk.png" }
+    // ],
+    link: "https://intelli-mock-rbok.vercel.app/",
+  },
+  {
+    id: 3,
     title: "See the Sort",
     img: "Hot.png",
-    desc: " A react based application using Data structure and algorithm , showcasing sorting algorithms like Bubble Sort, Insertion Sort, Merge sort,Quick Sort.",
+    desc: [
+     
+      "<strong>Tech Stack:</strong> React, Framer Motion, CSS",
+      "A react application that visually demonstrates sorting algorithms.",
+      " Multiple Algorithms: Bubble, Insertion, Merge, and Quick Sort with animations.",
+      
+    
+      "Beginner-Friendly: Simple, interactive tool to understand sorting logic."
+    ],
     link: "https://see-the-sort-d7ma.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "GitPeek",
     img: "BILLLLi.png",
-    desc: " The GitHub Profile Search Project is a simple and interactive web application built using HTML, CSS, and JavaScript. The primary goal of the project is to allow users to search for GitHub profiles by entering a username and display relevant profile details in a visually appealing manner.",
+    desc: [
+      "<strong>Tech Stack:</strong> React, CSS, JavaScript",
+      "Simple and interactive web application built with HTML, CSS, and JavaScript",
+      "Search for GitHub profiles by entering any username",
+      "Display relevant profile details in a visually appealing manner",
+      "Clean and intuitive interface for easy profile exploration"
+    ],
     link: "https://git-peek-l2yr.vercel.app/",
   },
+  
   {
-    id: 4,
-    title: "IntelliMock Ai",
-    img: "image.png",
-    desc: "Ai asks industry specific questions to the user and based on the answers provided by the user, it generates a mock interview experience for the user. The user can practice the interview as many times as they want.",
-    link: "https://intelli-mock-rbok.vercel.app/",
+    id: 5,
+    title: "Task Buddy",
+    img: "Task.png",
+    desc: [
+      "<strong>Tech Stack:</strong> React, CSS, JavaScript",
+      "Users can add new tasks with an input field and assign them a priority level. ",
+      "The interface provides filtering options—All, Active, and Completed tasks.",
+
+      "A dropdown on the right allows users to sort tasks based on criteria  for better management."
+    ],
+    link: " https://task-buddy-4git6js2y-kushalpriyaaas-projects.vercel.app/",
   },
- 
   {
-    id: 3,
-    title: "EmoAge Ai",
-    img: "Age.png",
-    desc: "EmoAge Ai is a web application that uses machine learning to predict the age and emotion of a person from an image. The application is built using React and TensorFlow.js, and it uses a pre-trained model to make predictions.",
-    link: "https://emo-age-ai.vercel.app/",
-  },
-  {
-    id: 1,
+    id: 6,
     title: "Your Weather Wise",
     img: "weather.png",
-    desc: "This is a React-based weather application that provides real-time weather updates for various locations. The app is designed to be user-friendly, and visually appealing, offering an intuitive experiance.",
-    link: "https://reactjs.org/",
+    desc: [
+      "<strong>Tech Stack:</strong> React, CSS, JavaScript, Weather API",
+      " A React-based web app that delivers up-to-date weather information for any entered city.",
+      " Users can type a city name and click \"Search\" to fetch weather data instantly.",
+      
+     
+    ],
+    link: "https://github.com/Kushalpriyaaa/Weather_Wise",
   },
 ];
 
@@ -63,7 +128,27 @@ const Single = ({ item }) => {
           </div>
           <div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
-            <p>{item.desc}</p>
+            {Array.isArray(item.desc) ? (
+              <ul>
+                {item.desc.map((point, index) => (
+                  <li key={index} dangerouslySetInnerHTML={{ __html: point }}></li>
+                ))}
+              </ul>
+            ) : (
+              <p>{item.desc}</p>
+            )}
+            {item.techStack && (
+              <div className="techStack">
+                <span className="techLabel">Built with:</span>
+                <div className="techLogos">
+                  {item.techStack.map((tech, index) => (
+                    <div key={index} className="techItem" title={tech.name}>
+                      <img src={tech.logo} alt={tech.name} className="techLogo" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
             <button onClick={handleButtonClick}>See Demo</button>
           </div>
         </div>
@@ -76,7 +161,7 @@ const Portfolio = () => {
   const ref = useRef();
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["end end", "start start"],
+    offset: ["start start", "end start"],
   });
 
   const scaleX = useSpring(scrollYProgress, {
@@ -84,14 +169,22 @@ const Portfolio = () => {
     damping: 30,
   });
 
+  // Heading disappears earlier (80-90% scroll) so it's gone before contact section
+  const headingOpacity = useTransform(scrollYProgress, [0, 0.8, 0.9], [1, 1, 0]);
+
   return (
-    <div className="portfolio" ref={ref}>
-      <div className="progress">
+    <div className="projects" ref={ref}>
+      <motion.div className="progress" style={{ opacity: headingOpacity }}>
         <h1>Featured Works</h1>
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
-      </div>
-      {items.map((item) => (
-        <Single item={item} key={item.id} />
+      </motion.div>
+      {/* Group projects into pairs - 2 projects per page */}
+      {Array.from({ length: Math.ceil(items.length / 2) }, (_, pageIndex) => (
+        <div key={pageIndex} className="projectPage">
+          {items.slice(pageIndex * 2, pageIndex * 2 + 2).map((item) => (
+            <Single item={item} key={item.id} />
+          ))}
+        </div>
       ))}
     </div>
   );

@@ -15,18 +15,28 @@ const App = () => {
         <Navbar />
         <Hero />
       </section>
+     
       <section id="About me">
         <Parallax type="services" />
-        </section> 
-        <section><Services/></section>
+      </section> 
       
-      <section id="Skills"><Parallax type="portfolio" /></section>
-      <Portfolio /> 
+      <section>
+        <Services/>
+      </section>
+
+      <section id="Skills">
+        <Parallax type="projects" />
+      </section>
       
+      <section id="Projects">
+        <Portfolio />
+      </section>
       
-        <section id="Contact">
-       <Contact/>
-        </section>   
+      <div style={{ height: "550vh" }}></div>
+      
+      <section id="Contact">
+        <Contact/>
+      </section>   
     </div>
   );
 };
