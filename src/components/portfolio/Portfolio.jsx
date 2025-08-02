@@ -121,7 +121,7 @@ const Single = ({ item }) => {
 
   return (
     <section>
-      <div className="container">
+      <div className="container" onClick={handleButtonClick} style={{ cursor: 'pointer' }}>
         <div className="wrapper">
           <div className="imageContainer" ref={ref}>
             <img src={item.img} alt={item.title} />
@@ -149,7 +149,6 @@ const Single = ({ item }) => {
                 </div>
               </div>
             )}
-            <button onClick={handleButtonClick}>See Demo</button>
           </div>
         </div>
       </div>
