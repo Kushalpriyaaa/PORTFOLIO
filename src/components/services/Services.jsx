@@ -124,7 +124,7 @@ const Services = () => {
 
           <button
             onClick={() =>
-              (window.location.href = "https://intelli-mock-rbok.vercel.app/")
+              (window.location.href = "https://my-pockettt.onrender.com/")
             }
             onMouseOver={(e) => (e.target.style.backgroundColor = "darkorange")}
             onMouseOut={(e) => (e.target.style.backgroundColor = "orange")}
